@@ -120,7 +120,7 @@ def completar_cliente(cliente_id):
         return None
 
 try:
-    response = requests.get(funil_clientes_path, params_isales)
+    response = requests.get(funil_clientes_path, params=params_isales)
     response.raise_for_status() # obtém o status da requisição, se ocorrer um erro lança uma exceção
     data_funil_clientes = response.json() # armazenamento das informações em formato json
 
